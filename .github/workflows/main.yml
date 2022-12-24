@@ -17,8 +17,6 @@ jobs:
           node-version: "14.x"
       - name: 🔨 Build Project
         run: npm install
-      - name: listing packages
-        run: npm list --depth 0
       - name: 📂 Sync files
         uses: SamKirkland/FTP-Deploy-Action@4.3.3
         with:
