@@ -4,17 +4,18 @@ import { useSelector } from "react-redux";
 import NavbarMenu from "./NavbarMenu";
 const Home = () => {
   const todos = useSelector((state) => state.todos);
-  const [placeholder, setPlaceholder] = useState([]);
+  // const [placeholder, setPlaceholder] = useState([]);
 
   // const getData = async =>{
   //  let data = await axios.get('https://jsonplaceholder.typicode.com/todos');
   // }
   useEffect(() => {
     axios.get(`https://dummyjson.com/products`).then((response) => {
-      setPlaceholder(response.data);
+      console.log(response.data);
     });
-    console.log(placeholder);
   }, []);
+
+
   return (
     <>
       <NavbarMenu />
