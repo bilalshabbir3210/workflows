@@ -13,7 +13,6 @@ function ContactForm(props) {
     });
 
     const onChangeHandleInput = (e) => {
-        let obj = inputFields;
         let name = e.target.name;
         let value = e.target.value;
         setInputFields(

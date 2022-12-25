@@ -3,16 +3,13 @@ import React, { Component } from "react";
 import { Form, Button, Container } from "react-bootstrap";
 
 class RegisterForm extends Component {
-  constructor(props) {
-    super(props);
-  }
+
   state = {
     name: "",
     email: "",
     password: "",
   };
   onChangeHandleInput = (e) => {
-    let obj = this.state;
     let name = e.target.name;
     let value = e.target.value;
     this.setState({

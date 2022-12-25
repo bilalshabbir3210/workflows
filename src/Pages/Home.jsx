@@ -13,16 +13,17 @@ const Home = () => {
     axios.get(`https://dummyjson.com/products`).then((response) => {
       setPlaceholder(response.data);
     });
+    console.log(placeholder);
   }, []);
   return (
     <>
       <NavbarMenu />
       <h1>Todo List.</h1>
       {
-         console.log(todos)
+        console.log(todos)
         // placeholder?.products?.map((product) => {
         //   return <li>{product.title}</li>;
-        
+
         // })
         // todos.map(todo =>{
         //   return (<li>{todo.title}</li>);
