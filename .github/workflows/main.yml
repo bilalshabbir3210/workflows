@@ -24,18 +24,18 @@ jobs:
      
       - name: 🔨 Build Project
         run: |
-            npm ci
             npm install 
             npm run production
       
       - uses: actions/upload-artifact@v3
         with:
             name: my-artifact
-            path: build/**
+            path: build/
       
       - name: 📂 Sync files
         uses: SamKirkland/FTP-Deploy-Action@4.3.3
         with:
+          local-dir: build/
           server: prismcloudhosting.com
           username: ${{ secrets.ftp_username }}
           password: ${{ secrets.ftp_password }}
